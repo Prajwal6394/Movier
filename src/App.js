@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Movie from "./Components/Movie";
+import Header from "./Components/Header";
 
 const Main_API =
   "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=14f4987f91047d6556cbdf8801520ff1&page1";
@@ -12,22 +13,20 @@ function App() {
   const [search, setSearch] = useState("Batman");
 
   useEffect(() => {
-    fetch(Main_API)
+    getMovies(Main_API);
+  }, []);
+
+  const getMovies = (API) => {
+    fetch(API)
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results);
       });
-  }, []);
-
+  };
   const handleOnSubmit = (e) => {
-   e.preventDefault();
+    e.preventDefault();
     if (search) {
-      fetch(serach_API + search)
-        .then((res) => res.json())
-        .then((data) => {
-          setMovies(data.results);
-        });
-
+      getMovies(serach_API + search);
       setSearch("");
     }
   };
@@ -39,6 +38,7 @@ function App() {
   return (
     <>
       <header>
+        <Header />
         <form onSubmit={handleOnSubmit}>
           <input
             className="search"
