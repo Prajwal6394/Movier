@@ -44,6 +44,7 @@ header{
   border-radius: 50px;
   background-color: transparent;
   padding: 0.5rem 1.5rem;
+  color: white;
 }
 .movie-container{
   display: flex;
