@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,100;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,100;1,200&family=Tapestry&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Poppins:ital,wght@0,200;0,400;1,100;1,200&family=Tapestry&display=swap');
 
 
 *{
@@ -106,3 +108,40 @@ header{
   color: red;
 }
 
+.Movier{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  margin-right: 30.4rem;
+  width: 250px;
+  font-family: "Tapestry", sans-serif;
+  font-size: 1.8rem;
+  overflow: hidden;
+  position: relative;
+ 
+}
+
+.footer{
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgb(76, 75, 72);
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  align-items: center;
+ 
+}
+.footer-p{
+  font-size: 1.2rem;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  
+}
+
+.footer-q{
+  text-align: center;
+  font-family: "Oleo Script Swash Caps", sans-serif;
+}
